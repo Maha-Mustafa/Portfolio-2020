@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    border: 5px solid #222;
+    color: #494C4E;
+}
+h2{
+    font-family: 'Parisienne', cursive;
+    font-weight: 700;
+    text-align: center;
+}
+/* .....navigation(mobile first)...... */
+.navbar{
+    font-weight: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+}
+.main-nav{
+    list-style: none;
+    display: none;
+}
+.nav-links{
+    text-decoration: none;
+    color: rgba(3, 3, 3, 0.7);
+}
+.main-nav li{
+    text-align: center;
+    margin: 15px auto;
+    text-transform: uppercase;
+}
+.logo img{
+    display: inline-block;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
+    transition: all 0.5s ease-in-out;
+}
+.logo img:hover{
+    transform: rotate(-90deg);
+}
+.navbar-toggle{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.active{
+    display: block;
+}
+nav .visible{
+    display: none;
+}
+/* for large screen */
+@media screen and (min-width:786px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 30px;
+    }
+    .main-nav li{
+        margin:0;
+    }
+    .nav-links{
+        margin-left: 40px;
+        font-weight: 700;
+    }
+    .logo{
+        margin-top: 0px;
+    }
+    .navbar-toggle{
+        display: none;
+    }
+    .nav-links:hover{
+        color: #F6AC00;
+    }
+    nav .visible{
+        display: none;
+    }
+}
+/* ....parallax affect.... */
+.pimg1{
+    position: relative;
+    opacity: 0.7;
+    background: url('../images/pencils.jpg');
+    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.ptext .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+@media(max-width:568px){
+    .pimg1{
+      background-attachment:scroll;
+    }
+    .ptext .border{
+        padding: 0px;
+    }
+}
+/* connect section */
+.connect-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 80px;
+}
+.connect-section-header > h2{
+    font-size: 250%;
+}
+.connect-btn{
+    padding: 10px;
+    border: 1px solid #F6AC00;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 200px;
+}
+.connect-btn a{
+    color: #494C4E;
+    text-decoration: none;
+}
+.connect-btn{
+    transition: transform 0.3s ease-out;
+}
+.connect-btn:hover{
+    transform: translateX(8px);
+}
+/* ....footer....... */
+.footer-section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    padding: 1.7rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.footer-section .icon, .footer-section .footer-text{
+    font-size: 20px;
+    color: #494C4E;
+    padding: 5px;
+    font-family: 'Parisienne', cursive;
+}
+.footer-section .icon a{
+    color: #494C4E;
+    font-size: 30px;
+    margin-right: 25px;
+}
+.footer-section .icon a:hover{
+    color: #F6AC00;
+}

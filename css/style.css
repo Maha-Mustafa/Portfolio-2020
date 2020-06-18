@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    border: 5px solid #222;
+    color: #494C4E;
+}
+h2{
+    font-family: 'Parisienne', cursive;
+    font-weight: 700;
+    text-align: center;
+}
+/* .....navigation(mobile first)...... */
+.navbar{
+    font-weight: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+}
+.main-nav{
+    list-style: none;
+    display: none;
+}
+.nav-links{
+    text-decoration: none;
+    color: rgba(3, 3, 3, 0.7);
+}
+.main-nav li{
+    text-align: center;
+    margin: 15px auto;
+    text-transform: uppercase;
+}
+.logo img{
+    display: inline-block;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
+    transition: all 0.5s ease-in-out;
+}
+.logo img:hover{
+    transform: rotate(-90deg);
+}
+.navbar-toggle{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.active{
+    display: block;
+}
+nav .visible{
+    display: none;
+}
+/* for large screen */
+@media screen and (min-width:786px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 30px;
+    }
+    .main-nav li{
+        margin:0;
+    }
+    .nav-links{
+        margin-left: 40px;
+        font-weight: 700;
+    }
+    .logo{
+        margin-top: 0px;
+    }
+    .navbar-toggle{
+        display: none;
+    }
+    .nav-links:hover{
+        color: #F6AC00;
+    }
+    nav .visible{
+        display: none;
+    }
+}
+/* ....welcome section.... */
+.welcome{
+    margin: 40px auto;
+    color: #494C4E;
+    font-size: 20px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    padding: 0px 30px;
+}
+/* ... about section... */
+.about{
+    /* padding: 10px 80px; */
+    /* margin-left: 35px; */
+    margin: 0px 35px;
+    max-width: 85%;
+}
+.about h4{
+    color: #F6AC00;
+    font-size: 0.8em;
+}
+.about h3{
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+.about p{
+    font-size: 1.2em;
+    line-height: 2em;
+    margin-bottom: 4.5em;
+}
+
+/*....connect section.... */
+.connect-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: -65px;
+}
+.connect-section-header > h2{
+    font-size: 250%;
+}
+.connect-link{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin: 15px auto 0px auto;
+    flex-wrap: wrap;
+}
+.connect-btn{
+    padding: 10px;
+    border: 1px solid #F6AC00;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 200px;
+}
+.connect-btn a{
+    color: #494C4E;
+    text-decoration: none;
+}
+.connect-btn{
+    transition: transform 0.3s ease-out;
+}
+.connect-btn:hover{
+    transform: translateX(8px);
+}
+.connect-details {
+    font-size: 2.4rem;
+    color: #494C4E;
+    text-decoration: none;
+    transition: transform 0.3s ease-out;
+}
+.connect-details:hover {
+    transform: translateY(8px);
+}
+/*.....chevron...... */
+.chevron{
+    text-align: center;
+    transition: transform 0.3s ease-out;
+    margin-top: 15px;
+    font-size: 52px;
+}
+.chevron a{
+    color: #F6AC00;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.chevron:hover{
+    transform: translateY(8px);
+}
+/*.....project section.....*/
+.project-section{
+    text-align: center;
+    padding: 120px 32px;
+}
+.project-header{
+    max-width: 640px;
+    margin: 0 auto 30px auto;
+    border-bottom: 1px solid #e0e0d1;
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+}
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.project-grid > a > p{
+    /* color: rgba(255, 255, 255, 0.7); */
+    color: #F6AC00;
+    opacity: 0.7;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.project-grid > a:hover{
+    opacity: 0.7;
+    background-color: #F6AC00;
+}
+.project-grid > a > p:hover{
+    color: #494C4E;
+}
+.project-grid > a{
+    text-decoration: none;
+}
+@media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+}
+/* .....project area...... */
+.project{
+    background-color: #e0e0d1;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+}
+.project-title{
+    font-size: 24px;
+    padding: 32px 8px;
+}
+.project-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* ....footer....... */
+.footer-section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    padding: 1.7rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.footer-section .icon, .footer-section .footer-text{
+    font-size: 20px;
+    color: #494C4E;
+    padding: 5px;
+    font-family: 'Parisienne', cursive;
+}
+.footer-section .icon a{
+    color: #494C4E;
+    font-size: 30px;
+    margin-right: 25px;
+}
+.footer-section .icon a:hover{
+    color: #F6AC00;
+}
