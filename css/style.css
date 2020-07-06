@@ -127,9 +127,10 @@ nav .visible{
 .about div{
     margin-bottom: 4.5em;
 }
-.icons img{
+.icons i{
+    font-size: 40px;
     padding: 0.2em;
-    margin-right: 4em;
+    margin-right: 1em;
 }
 /*....connect section.... */
 .connect-section{
